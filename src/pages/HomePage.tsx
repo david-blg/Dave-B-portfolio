@@ -2,10 +2,9 @@
 import CardProjects from "@/components/custom/CardProjects"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
+import daveLogo from "@/assets/logos/dave-b-logo.png"
 
 
 const SOCIALS = [
@@ -33,29 +32,26 @@ const SOCIALS = [
 
 
 const HomePage = () => {
-    const router = useRouter()
 
 
     const handleNavigate = (url: string) => {
-        router.push(url)
+        window.open(url, "_blank")
     }
 
 
     return (
         <div className="flex-col justify-between">
-            <div className="flex justify-between p-24 pt-8 sticky">
+          <div className="flex justify-between pt-4 sm:pt-8">
                 <div className="">
                     <Image
-                        src="/vercel.svg"
+                        src={daveLogo}
                         alt="Dave B Logo"
-                        className="dark:invert"
-                        width={100}
-                        height={24}
-                        priority
+                        width={50}
+                        height={50}
                     />
-                    <div className="mt-2 flex">
-                        <h1 className="text-muted-foreground">Full Stack Developer</h1>
-                    </div>
+                    {/* <div className="mt-2 flex">
+                        <h1 className="font-semibold text-2xl">Dave - B</h1>
+                    </div> */}
                 </div>
                 <div className="flex items-center">
                     {SOCIALS.map((social, index) => (
@@ -71,14 +67,12 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col items-center mt-2 w-full p-24 pt-4">
+            <div className="flex flex-col items-center mt-2 w-full pt-16">
                 <div className="text-center mb-6">
                     <h2 className="text-4xl font-semibold">Projects</h2>
                     <p className="text-muted-foreground">Here are some of the projects I have worked on</p>
                 </div>
-                <div className="mt-4">
                     <CardProjects />
-                </div>
             </div>
         </div>
     )
