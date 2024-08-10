@@ -19,6 +19,9 @@ const config = {
     },
     extend: {
       colors: {
+        prod: "hsl(var(--prod))",
+        demo: "hsl(var(--demo))",
+        dev: "hsl(var(--dev))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

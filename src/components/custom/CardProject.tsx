@@ -1,48 +1,51 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import Image, { StaticImageData } from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
-import { FaGithub, FaGlobe } from 'react-icons/fa';
-import { useRouter } from 'next/navigation';
+import { FaGithub } from 'react-icons/fa';
 import { Globe } from 'lucide-react';
+import { Badge } from '../ui/badge';
 
 interface CardProjectProps {
     title: string;
     description: string;
     icon?: React.ReactNode;
-    textSize?: string;
     index: number;
     image?: StaticImageData;
     children?: React.ReactNode;
     onClick?: () => void;
     github_url?: string;
     website_url?: string;
+    badge?: string;
 }
 
-const CardProject = ({ icon, description, index, title, website_url, github_url, image }: CardProjectProps) => {
+const CardProject = ({ icon, description, index, title, website_url, github_url, image, badge }: CardProjectProps) => {
 
-    const router = useRouter()
 
     const handleNavigate = (url: string) => {
-        router.push(url)
+        window.open(url, "_blank")
     }
 
     return (
         <Card key={index} className="bg-transparent border-none h-full transition-all duration-200 ease-out hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-[0.1rem]">
             <CardHeader>
-                <CardTitle className="flex items-start gap-2 text-xl">
-                    {image && (
-                        <Image
-                            src={image}
-                            alt={title}
-                            width={24}
-                            height={24}
-                            className="rounded-md"
-                        />
-                    )}
-                    {icon && icon}
-                    {title}
+                <CardTitle className="flex  justify-between gap-2 text-xl">
+                    <div className='flex gap-2 '>
+                        {image && (
+                            <Image
+                                src={image}
+                                alt={title}
+                                width={24}
+                                height={24}
+                                className="rounded-md"
+                            />
+                        )}
+                        {icon && icon}
+                        {title}
+                    </div>
+                    <Badge variant={badge == 'Prod' ? 'prod' : 'demo'}>
+                      {badge}
+                    </Badge>
                 </CardTitle>
             </CardHeader>
             <CardContent>

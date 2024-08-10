@@ -6,6 +6,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 import daveLogo from "@/assets/logos/dave-b-logo.png"
 
+
 const SOCIALS = [
     {
         name: "GitHub",
@@ -40,8 +41,7 @@ const HomePage = () => {
 
     return (
         <div className="flex-col justify-between">
-             {/* p-4 pt-8 sm:p-8 md:p-16 lg:px-12 sticky */}
-          <div className="flex justify-between p-t4 sm:pt-8">
+          <div className="flex justify-between pt-4 sm:pt-8">
                 <div className="">
                     <Image
                         src={daveLogo}
@@ -49,9 +49,9 @@ const HomePage = () => {
                         width={50}
                         height={50}
                     />
-                    <div className="mt-2 flex">
-                        <h1 className="text-muted-foreground">Software Developer</h1>
-                    </div>
+                    {/* <div className="mt-2 flex">
+                        <h1 className="font-semibold text-2xl">Dave - B</h1>
+                    </div> */}
                 </div>
                 <div className="flex items-center">
                     {SOCIALS.map((social, index) => (

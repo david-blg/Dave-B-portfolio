@@ -72,6 +72,7 @@ const CardProjects = () => {
                         website_url={project.website_url}
                         image={project.image}
                         icon={project.icon}
+                        badge={project.badge}
                     />
                 </div>
             ))}

@@ -16,17 +16,10 @@
     --secondary-foreground: 210 40% 98%;
     --muted: 0 0% 17.5%;
     --muted-foreground: 0 0% 65.1%;
-    /* --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%; */
- 
-
-
     --accent: 0 0% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 0 0% 17.5%;
     --input: 0 0% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -36,6 +29,11 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --prod: 217.2 91.2% 59.8%;
+    --dev: 0 0% 17.5%;
+    --demo: 37.7 92.1% 50.2%
+
+
   }
 
   .dark {
@@ -63,6 +61,11 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+
+    --prod: 217.2 91.2% 59.8%;
+    --dev: 0 0% 17.5%;
+    --demo: 37.7 92.1% 50.2%
+
   }
 }
 
@@ -70,6 +73,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
