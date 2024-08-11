@@ -20,7 +20,7 @@ This is my personal portfolio created with Next.js 14, ShadcnUI, TailwindCSS, an
 
 Some of the featured projects include:
 
-1. **Brender Studio**: Open Source desktop application for cloud rendering with Blender in AWS.
+1. **Brender Studio**: Open Source desktop application for cloud rendering with Blender on AWS.
    - [GitHub](https://github.com/Brender-Studio/brender-studio-app)
    - [Website](https://brenderstudio.com/download)
 
