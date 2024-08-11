@@ -26,6 +26,8 @@ const CardProject = ({ icon, description, index, title, website_url, github_url,
         window.open(url, "_blank")
     }
 
+    const webSiteBtnVariant = github_url ? 'outline' : 'default'
+
     return (
         <Card key={index} className="bg-transparent border-none h-full transition-all duration-200 ease-out hover:shadow-lg hover:shadow-accent/10 hover:-translate-y-[0.1rem]">
             <CardHeader>
@@ -61,7 +63,7 @@ const CardProject = ({ icon, description, index, title, website_url, github_url,
                     </Button>
                 )}
                 {website_url && (
-                    <Button size='sm' variant='outline' onClick={() => handleNavigate(website_url)} className='gap-2'>
+                    <Button size='sm' variant={webSiteBtnVariant} onClick={() => handleNavigate(website_url)} className='gap-2'>
                         <Globe size={16} />
                         Website
                     </Button>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
-import daveLogo from "@/assets/logos/dave-b-logo.png"
+import daveLogo from "@/assets/logos/dave-b-logo.webp"
 
 
 const SOCIALS = [
@@ -46,12 +46,9 @@ const HomePage = () => {
                     <Image
                         src={daveLogo}
                         alt="Dave B Logo"
-                        width={50}
-                        height={50}
+                        width={40}
+                        height={40}
                     />
-                    {/* <div className="mt-2 flex">
-                        <h1 className="font-semibold text-2xl">Dave - B</h1>
-                    </div> */}
                 </div>
                 <div className="flex items-center">
                     {SOCIALS.map((social, index) => (
